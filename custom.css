@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --space-1: 1.3rem;
+  --space-2: 2rem;
+  --radius: 0.4rem;
+  --color-light: #f0f0f0;
+  --color-magenta: #ff248c;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #172030;
+  color: var(--color-light);
+}
+
+.login-page-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2);
+  border-radius: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2638;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+header {
+  text-align: center;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+header img {
+  position: relative;
+  max-width: 180px;
+  margin: 0.7rem auto;
+}
+
+header p {
+  margin: 0 2rem;
+  color: var(--color-light);
+}
+
+header p span {
+  font-style: italic;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+form input {
+  width: 100%;
+  padding: 0.63rem 0.88rem;
+  font-size: 0.9rem;
+  color: var(--color-light);
+  background-color: #172030;
+  border: 1px solid #6b7080;
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input::placeholder {
+  color: #6b7080;
+}
+
+form input:hover {
+  border-color: var(--color-magenta);
+}
+
+form input:focus {
+  border-color: var(--color-magenta);
+  box-shadow: 0 0 0 3px rgba(255, 36, 138, 0.4);
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  background: #00b182;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out;
+}
+
+form button:hover {
+  background: #00956a;
+}
+
+.message {
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: var(--space-1);
+}
+
+.message.success {
+  background-color: #00b182;
+  color: var(--color-light);
+}
+.message.error {
+  background-color: var(--color-magenta);
+  color: var(--color-light);
+}

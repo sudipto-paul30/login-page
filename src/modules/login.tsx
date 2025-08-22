@@ -35,6 +35,25 @@ export default function Login() {
             Please sign in to your <span>NetX</span> account here.
           </p>
         </header>
+
+        <form onSubmit={handleLogin}>
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Sign In</button>
+        </form>
+
         {message && (
           <div className={`message ${isSuccess ? "success" : "error"}`}>
             {message}
